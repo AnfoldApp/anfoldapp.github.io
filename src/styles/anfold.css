@@ -247,11 +247,6 @@ footer:before {
   gap: var(--spacing-2);
 }
 
-.logo-container .logo {
-  width: 40px;
-  height: 40px;
-}
-
 .hero-content-box {
   background: var(--hero-background);
   border-radius: 24px;

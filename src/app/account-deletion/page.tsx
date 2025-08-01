@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import Link from "next/link";
 
 export default function AccountDeletionPage() {
   return (
@@ -23,9 +24,9 @@ export default function AccountDeletionPage() {
         </p>
         <p>
           For more details, please refer to our{" "}
-          <a href="/privacy-policy" className="with-underline">
+          <Link href="/privacy-policy" className="with-underline">
             Privacy Policy
-          </a>
+          </Link>
           .
         </p>
       </section>
