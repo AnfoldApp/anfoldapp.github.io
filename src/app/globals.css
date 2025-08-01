@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@import '../styles/anfold.css';
+
+:root {
+  /* Color Variables */
+  --primary-bg: #F9FAF5;
+  --primary-text: #2D2D2D;
+  --green-darker: #418649;
+  --green-dark: #56a860;
+  --green-main: #6BCB77;
+  --white: #FFFFFF;
+  --border-color: #EDEBE2;
+  --hero-gradient-start: #D0E5D0;
+  --hero-gradient-end: transparent;
+  --hero-background: #D0E5D0;
+  
+  /* Typography */
+  --font-family: 'Afacad', sans-serif;
+  --font-size-base: 18px;
+  --font-size-large: 48px;
+  --font-size-medium: 32px;
+  --font-size-small: 28px;
+  
+  /* Spacing */
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;  /* 4px */
+  --spacing-2: 0.5rem;   /* 8px */
+  --spacing-3: 1rem;     /* 16px */
+  --spacing-4: 1.5rem;   /* 24px */
+  --spacing-5: 3rem;     /* 48px */
+  --spacing-6: 4rem;     /* 64px */
+  --spacing-7: 5rem;     /* 80px */
+  --spacing-8: 6rem;     /* 96px */
+  
+  /* Legacy aliases */
+  --spacing-xs: var(--spacing-2);   /* 8px */
+  --spacing-sm: var(--spacing-3);   /* 16px */
+  --spacing-md: var(--spacing-4);   /* 24px */
+  --spacing-lg: var(--spacing-6);   /* 64px */
+  --spacing-xl: var(--spacing-8);   /* 96px */
+  
+  /* Effects */
+  --border-radius: 5px;
+  --transition-fast: 0.3s ease-in-out;
+  --gradient-primary: linear-gradient(to top, var(--green-dark) 0%, var(--green-main) 100%);
+  --gradient-dark: linear-gradient(to top, var(--green-darker) 0%, var(--green-dark) 100%);
+  --gradient-underline: linear-gradient(to right, var(--green-dark) 0%, var(--green-main) 100%);
+  
+  /* Custom rotation variables for animations */
+  --rotation: 0deg;
+  
+  /* Custom font sizes for Tailwind v4 */
+  --font-size-display-1: 6rem;
+  --font-size-display-2: 5.5rem;
+  --font-size-display-3: 4.5rem;
+  --font-size-display-4: 3.5rem;
+}
