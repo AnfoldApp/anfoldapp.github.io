@@ -1,4 +1,11 @@
 import Layout from "@/components/Layout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Imprint | Anfold",
+  description:
+    "Legal information and contact details for Avocado Technologies UG (haftungsbeschränkt), the company behind Anfold AI nutrition and exercise journal app.",
+};
 
 export default function Imprint() {
   return (

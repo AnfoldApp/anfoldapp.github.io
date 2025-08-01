@@ -1,5 +1,12 @@
 import Layout from "@/components/Layout";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Delete Your Account | Anfold",
+  description:
+    "Learn how to permanently delete your Anfold account and associated data. Follow our step-by-step guide to remove your account from the AI nutrition and exercise journal app.",
+};
 
 export default function AccountDeletionPage() {
   return (

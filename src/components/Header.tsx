@@ -12,7 +12,7 @@ export default function Header() {
           width={40}
           height={40}
         />
-        <h3 className="font-medium mb-0">Anfold</h3>
+        <h3 className="font-medium mb-0 text-2xl">Anfold</h3>
       </Link>
 
       <a

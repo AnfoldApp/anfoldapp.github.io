@@ -1,4 +1,11 @@
 import Layout from "@/components/Layout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Anfold",
+  description:
+    "Learn how Anfold collects, uses, and protects your personal data. Our comprehensive privacy policy covers data storage, user rights, and security measures for the AI-powered nutrition and exercise journal.",
+};
 
 export default function PrivacyPolicy() {
   return (

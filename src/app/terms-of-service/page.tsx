@@ -1,4 +1,11 @@
 import Layout from "@/components/Layout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms of Service | Anfold",
+  description:
+    "Read Anfold's terms of service covering user accounts, subscriptions, content policies, and legal terms for using our AI-powered nutrition and exercise journal app.",
+};
 
 export default function TermsOfService() {
   return (

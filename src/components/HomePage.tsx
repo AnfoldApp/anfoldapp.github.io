@@ -14,7 +14,7 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section className="hero-section">
-        <div className="hero-wrapper h-full relative">
+        <div className="hero-wrapper h-full relative max-w-7xl mx-auto">
           <div className="logo-container">
             <Image
               src="/assets/images/logo-dark.svg"
@@ -23,7 +23,7 @@ export default function HomePage() {
               width={40}
               height={40}
             />
-            <h3 className="font-semibold mb-0">Anfold</h3>
+            <h3 className="font-medium mb-0 text-2xl">Anfold</h3>
           </div>
 
           <div className="hero-top-content">
@@ -75,117 +75,109 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="features-section py-20">
+      <section className="usp-section py-20">
         <div className="container mx-auto px-4 max-w-6xl">
-          {/* Feature 1: Lifestyle Journal */}
-          <div className="flex flex-col lg:flex-row items-center py-20">
+          <div className="flex flex-col lg:flex-row gap-12 items-center py-20">
             <div className="w-full lg:w-1/2 mb-4 lg:mb-0">
-              <div className="feature-icon-wrapper mb-4">
-                <BookOpen className="feature-icon" />
-              </div>
-              <h2 className="font-bold text-2xl mb-3">Lifestyle Journal</h2>
+              <h2 className="font-bold text-2xl mb-3">
+                Your Whole Health,{" "}
+                <span className="text-gradient">One Journal</span>
+              </h2>
               <p className="text-lg opacity-75">
-                AI-powered tracking and personalized insights on meals, workouts
-                and more.
+                Track meals, workouts, and wellbeing notes all in one place, AI
+                turns your entries into meaningful insights.
               </p>
             </div>
             <div className="w-full lg:w-1/2">
-              <div className="feature-placeholder bg-gray-100 rounded p-20 text-center">
-                <BookOpen className="feature-placeholder-icon" />
+              <div className="usp-placeholder bg-gray-100 rounded-[40px] p-20 text-center">
+                <BookOpen className="usp-placeholder-icon" />
               </div>
             </div>
           </div>
 
-          {/* Feature 2: About You */}
-          <div className="flex flex-col lg:flex-row items-center py-20">
+          <div className="flex flex-col lg:flex-row gap-12 items-center py-20">
             <div className="w-full lg:w-1/2 lg:order-2 mb-4 lg:mb-0">
-              <div className="feature-icon-wrapper mb-4">
-                <UserCheck className="feature-icon" />
-              </div>
-              <h2 className="font-bold text-2xl mb-3">About You</h2>
+              <h2 className="font-bold text-2xl mb-3">
+                Made for Your Life,{" "}
+                <span className="text-gradient">Not Someone Else's</span>
+              </h2>
               <p className="text-lg opacity-75">
-                Your lifestyle needs are unique to you. Anfold considers your
-                personal factors.
+                Anfold adapts to your goals, preferences, and health factors for
+                advice that actually fits you.
               </p>
             </div>
             <div className="w-full lg:w-1/2 lg:order-1">
-              <div className="feature-placeholder bg-gray-100 rounded p-20 text-center">
-                <UserCheck className="feature-placeholder-icon" />
+              <div className="usp-placeholder bg-gray-100 rounded-[40px] p-20 text-center">
+                <UserCheck className="usp-placeholder-icon" />
               </div>
             </div>
           </div>
 
-          {/* Feature 3: Easy Logging */}
-          <div className="flex flex-col lg:flex-row items-center py-20">
+          <div className="flex flex-col lg:flex-row gap-12 items-center py-20">
             <div className="w-full lg:w-1/2 mb-4 lg:mb-0">
-              <div className="feature-icon-wrapper mb-4">
-                <Edit3 className="feature-icon" />
-              </div>
-              <h2 className="font-bold text-2xl mb-3">Easy Logging</h2>
+              <h2 className="font-bold text-2xl mb-3">
+                No More <span className="text-gradient">Clunky Logging</span>
+              </h2>
               <p className="text-lg opacity-75">
-                Log your meals or activities in your own words, get nutritional
-                and other insights.
+                Just describe your meal or workout in your own words, Anfold
+                handles the nutrition facts, calories, and data crunching.
               </p>
             </div>
             <div className="w-full lg:w-1/2">
-              <div className="feature-placeholder bg-gray-100 rounded p-20 text-center">
-                <Edit3 className="feature-placeholder-icon" />
+              <div className="usp-placeholder bg-gray-100 rounded-[40px] p-20 text-center">
+                <Edit3 className="usp-placeholder-icon" />
               </div>
             </div>
           </div>
 
-          {/* Feature 4: Detailed Tracking */}
-          <div className="flex flex-col lg:flex-row items-center py-20">
+          <div className="flex flex-col lg:flex-row gap-12 items-center py-20">
             <div className="w-full lg:w-1/2 lg:order-2 mb-4 lg:mb-0">
-              <div className="feature-icon-wrapper mb-4">
-                <BarChart3 className="feature-icon" />
-              </div>
-              <h2 className="font-bold text-2xl mb-3">Detailed Tracking</h2>
+              <h2 className="font-bold text-2xl mb-3">
+                Beyond <span className="text-gradient">Calories</span>
+              </h2>
               <p className="text-lg opacity-75">
-                Detailed macro and micronutrient breakdown, calories and more.
+                See full macro and micronutrient breakdowns, activity impact,
+                and how everything ties into your bigger health picture.
               </p>
             </div>
             <div className="w-full lg:w-1/2 lg:order-1">
-              <div className="feature-placeholder bg-gray-100 rounded p-20 text-center">
-                <BarChart3 className="feature-placeholder-icon" />
+              <div className="usp-placeholder bg-gray-100 rounded-[40px] p-20 text-center">
+                <BarChart3 className="usp-placeholder-icon" />
               </div>
             </div>
           </div>
 
-          {/* Feature 5: Contextual Chat */}
-          <div className="flex flex-col lg:flex-row items-center py-20">
+          <div className="flex flex-col lg:flex-row gap-12 items-center py-20">
             <div className="w-full lg:w-1/2 mb-4 lg:mb-0">
-              <div className="feature-icon-wrapper mb-4">
-                <MessageCircle className="feature-icon" />
-              </div>
-              <h2 className="font-bold text-2xl mb-3">Contextual Chat</h2>
+              <h2 className="font-bold text-2xl mb-3">
+                Talk to <span className="text-gradient">Your Data</span>
+              </h2>
               <p className="text-lg opacity-75">
-                Chat with your entries to get advice, insights, or just vent.
+                Ask questions, get explanations, or even vent, Anfold's
+                contextual chat understands your entries and responds with
+                useful advice.
               </p>
             </div>
             <div className="w-full lg:w-1/2">
-              <div className="feature-placeholder bg-gray-100 rounded p-20 text-center">
-                <MessageCircle className="feature-placeholder-icon" />
+              <div className="usp-placeholder bg-gray-100 rounded-[40px] p-20 text-center">
+                <MessageCircle className="usp-placeholder-icon" />
               </div>
             </div>
           </div>
 
-          {/* Feature 6: Lifestyle Tools */}
-          <div className="flex flex-col lg:flex-row items-center py-20">
+          <div className="flex flex-col lg:flex-row gap-12 items-center py-20">
             <div className="w-full lg:w-1/2 lg:order-2 mb-4 lg:mb-0">
-              <div className="feature-icon-wrapper mb-4">
-                <Settings className="feature-icon" />
-              </div>
-              <h2 className="font-bold text-2xl mb-3">Lifestyle Tools</h2>
+              <h2 className="font-bold text-2xl mb-3">
+                More Than <span className="text-gradient">Tracking</span>
+              </h2>
               <p className="text-lg opacity-75">
-                Generate personalized meal and exercise plans, or just analyze a
-                meal.
+                Need a meal plan? A workout outline? Or just a quick analysis of
+                dinner? Anfold goes beyond logging to help you take action.
               </p>
             </div>
             <div className="w-full lg:w-1/2 lg:order-1">
-              <div className="feature-placeholder bg-gray-100 rounded p-20 text-center">
-                <Settings className="feature-placeholder-icon" />
+              <div className="usp-placeholder bg-gray-100 rounded-[40px] p-20 text-center">
+                <Settings className="usp-placeholder-icon" />
               </div>
             </div>
           </div>
