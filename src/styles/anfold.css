@@ -542,11 +542,17 @@ footer:before {
 }
 
 @media (max-width: 991px) {
+  .logo-container {
+    justify-content: center;
+  }
+  
   .hero-phone-container {
     position: static;
     transform: none;
     margin-top: var(--spacing-4);
     text-align: center;
+    display: flex;
+    justify-content: center;
   }
   
   .hero-phone-image {
