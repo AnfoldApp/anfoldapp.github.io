@@ -99,7 +99,7 @@ export default function HomePage() {
             <div className="w-full lg:w-1/2 lg:order-2 mb-4 lg:mb-0">
               <h2 className="font-bold text-2xl mb-3">
                 Made for Your Life,{" "}
-                <span className="text-gradient">Not Someone Else's</span>
+                <span className="text-gradient">Not Someone Else&apos;s</span>
               </h2>
               <p className="text-lg opacity-75">
                 Anfold adapts to your goals, preferences, and health factors for
@@ -153,7 +153,7 @@ export default function HomePage() {
                 Talk to <span className="text-gradient">Your Data</span>
               </h2>
               <p className="text-lg opacity-75">
-                Ask questions, get explanations, or even vent, Anfold's
+                Ask questions, get explanations, or even vent, Anfold&apos;s
                 contextual chat understands your entries and responds with
                 useful advice.
               </p>
