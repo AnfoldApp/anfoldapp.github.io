@@ -32,7 +32,7 @@ export default function HomePageUsp({
           {titlePart1}
           <span className="text-gradient">{titlePart2}</span>
         </h1>
-        <p className="text-lg opacity-75">{description}</p>
+        <p className="text-xl opacity-75">{description}</p>
       </div>
       <div
         className={`w-full lg:w-1/2 ${

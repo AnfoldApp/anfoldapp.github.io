@@ -37,9 +37,11 @@ export default function HomePage() {
 
           <div className="hero-content-box">
             <div className="hero-content-inner">
-              <p className="text-xl mb-4">
-                <span className="font-bold">Anfold</span> is a personal guide to
-                wellness, designed to embrace the nuances of your lifestyle.
+              <p className="text-2xl mb-4">
+                <span className="font-bold">Anfold</span> is your personal guide
+                to nutrition and exercise, designed to adapt to your lifestyle
+                and help you connect the dots between your daily choices and
+                your overall wellbeing.
               </p>
 
               <div className="flex justify-start">

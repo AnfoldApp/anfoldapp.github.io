@@ -19,6 +19,24 @@
   }
 }
 
+@keyframes floatIcon {
+  0%, 100% {
+    transform: translateY(0px) rotate(var(--rotation));
+  }
+  50% {
+    transform: translateY(-10px) rotate(var(--rotation));
+  }
+}
+
+@keyframes floatIconAlt {
+  0%, 100% {
+    transform: translateY(0px) rotate(var(--rotation));
+  }
+  50% {
+    transform: translateY(-8px) rotate(var(--rotation));
+  }
+}
+
 .hero-section {
   background: var(--light-green-main);
   border-bottom: 1px solid var(--almond-lighter);
@@ -119,6 +137,13 @@
 
 .usp-placeholder-icon-1 {
   /* filter: drop-shadow(0 0 8px color-mix(in srgb, var(--charcoal-darkest) 30%, transparent)); */
+  animation: floatIcon 4.3s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+
+.usp-placeholder-icon-2 {
+  animation: floatIconAlt 3.9s ease-in-out infinite;
+  animation-delay: 0.8s;
 }
 
 .usp-section .row {
@@ -166,10 +191,6 @@
   opacity: 0.2;
   stroke-width: 1.5;
 }
-
-.hero-doodles .doodle {}
-
-.usp-doodles .doodle {}
 
 .hero-doodles .hero-doodle-1 {
   width: 32px;
