@@ -1,15 +1,8 @@
 import Image from "next/image";
 import {
-  BookOpen,
-  UserCheck,
-  Edit3,
-  BarChart3,
-  MessageCircle,
-  Settings,
   BookHeart,
   Target,
   Feather,
-  FilePieChart,
   FileChartColumn,
   BotMessageSquare,
   Lightbulb,
