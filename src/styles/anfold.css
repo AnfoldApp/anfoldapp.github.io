@@ -170,9 +170,6 @@ header:after {
 .footer {
   text-align: center;
   margin-top: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   padding: var(--spacing-lg) var(--spacing-md);
   position: relative;
   background: var(--light-green-main);
