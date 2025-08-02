@@ -15,7 +15,7 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section className="hero-section">
-        <div className="hero-wrapper h-full relative max-w-7xl mx-auto">
+        <div className="hero-wrapper h-full relative max-w-7xl mx-auto px-8 py-8">
           <div className="logo-container">
             <Image
               src="/assets/images/logo-dark.svg"
@@ -79,7 +79,7 @@ export default function HomePage() {
       </section>
 
       <section className="usp-section py-20">
-        <div className="container mx-auto px-4 max-w-6xl">
+        <div className="container mx-auto px-8 max-w-7xl">
           <HomePageUsp
             titlePart1="Your Lifestyle, "
             titlePart2="One Journal"
