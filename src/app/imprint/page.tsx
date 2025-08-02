@@ -13,7 +13,7 @@ export default function Imprint() {
       <section className="content-section flex flex-col text-base p-6 max-w-4xl mx-auto">
         <h3 className="text-3xl font-bold mb-1">Imprint</h3>
         <p className="text-base opacity-75 mb-3">
-          Effective Date: July 4th, 2024
+          Effective Date: July 31st, 2025
         </p>
 
         <div className="mb-4">

@@ -87,7 +87,7 @@
   --light-green-alt: #D0E5D0;
 
   /* Color Variables */
-  --primary-bg: --light-green-main;
+  --primary-bg: var(--light-green-lighter);
   --primary-text: var(--charcoal-darker);
   --green-darker: var(--mint-darker);
   --green-dark: var(--mint-dark);

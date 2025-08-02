@@ -28,10 +28,10 @@ export default function HomePageUsp({
   return (
     <div className="flex flex-col lg:flex-row gap-12 items-center py-20">
       <div className="w-full lg:w-1/2 lg:order-2 mb-4 lg:mb-0">
-        <h2 className="font-bold text-2xl mb-3">
+        <h1 className="font-bold text-4xl mb-3">
           {titlePart1}
           <span className="text-gradient">{titlePart2}</span>
-        </h2>
+        </h1>
         <p className="text-lg opacity-75">{description}</p>
       </div>
       <div
