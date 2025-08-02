@@ -28,7 +28,7 @@ export default function HomePage() {
           </div>
 
           <div className="flex flex-1 flex-col justify-end mb-8 lg:mb-0">
-            <h1 className="font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.1] hero-title mb-0">
+            <h1 className="font-bold text-4xl md:text-5xl lg:text-7xl leading-[1.1] hero-title mb-0">
               Your AI companion for
               <br />
               <span className="text-gradient">healthier living.</span>
@@ -37,7 +37,7 @@ export default function HomePage() {
 
           <div className="hero-content-box">
             <div className="hero-content-inner">
-              <p className="text-2xl mb-6">
+              <p className="text-xl md:text-2xl mb-6">
                 <span className="font-bold">Anfold</span> is your personal guide
                 to nutrition and exercise, designed to adapt to your lifestyle
                 and help you connect the dots between your daily choices and
