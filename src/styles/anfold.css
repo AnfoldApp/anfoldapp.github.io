@@ -1,6 +1,3 @@
-/* Anfold Custom Styles */
-
-/* Display Font Sizes */
 .text-display-1 {
   font-size: var(--font-size-display-1);
   line-height: 1.1;
@@ -95,7 +92,7 @@ a.with-underline:hover {
   margin-left: auto !important;
 }
 
-@media (min-width: 576px) {
+@media (min-width: var(--breakpoint-sm)) {
   .ml-sm-auto {
     margin-left: auto !important;
   }
@@ -104,7 +101,7 @@ a.with-underline:hover {
   .mt-sm-8 { margin-top: var(--spacing-8) !important; }
 }
 
-@media (min-width: 768px) {
+@media (min-width: var(--breakpoint-md)) {
   .ml-md-auto {
     margin-left: auto !important;
   }
@@ -113,7 +110,7 @@ a.with-underline:hover {
   .mt-md-8 { margin-top: var(--spacing-8) !important; }
 }
 
-@media (min-width: 992px) {
+@media (min-width: var(--breakpoint-lg)) {
   .ml-lg-auto {
     margin-left: auto !important;
   }
@@ -122,7 +119,7 @@ a.with-underline:hover {
   .mt-lg-8 { margin-top: var(--spacing-8) !important; }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: var(--breakpoint-xl)) {
   .ml-xl-auto {
     margin-left: auto !important;
   }
@@ -244,76 +241,7 @@ footer:before {
   display: inline-block;
 }
 
-@media (max-width: 991px) {
-  .logo-container {
-    justify-content: center;
-  }
-  
-  .hero-phone-container {
-    position: static;
-    transform: none;
-    margin-top: var(--spacing-4);
-    text-align: center;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .hero-phone-image {
-    width: 280px;
-  }
-  
-  .hero-wrapper {
-    text-align: center;
-  }
-  
-  .hero-content-inner {
-    max-width: 100%;
-    text-align: center;
-  }
-  
-  .hero-content-inner .d-flex {
-    justify-content: center !important;
-  }
-  
-  .doodle {
-    opacity: 0.12;
-    animation-duration: 6s !important;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero-section {
-    height: auto;
-    min-height: 100vh;
-    padding: var(--spacing-4) 0;
-  }
-
-  .hero-wrapper {
-    padding: 0 var(--spacing-4);
-  }
-
-  .hero-title {
-    font-size: 38px;
-  }
-
-  .hero-content-inner {
-    padding: var(--spacing-4);
-  }
-
-  .hero-phone-image {
-    width: 220px;
-  }
-  
-  .doodle {
-    opacity: 0.08;
-    animation-duration: 8s !important;
-  }
-  
-  /* Hide some doodles on very small screens for cleaner look */
-  .doodle-4, .doodle-6, .doodle-10, .doodle-13, .doodle-15, .doodle-17 {
-    display: none;
-  }
-
+@media (max-width: 639px) {
   .footer {
     flex-direction: column;
   }

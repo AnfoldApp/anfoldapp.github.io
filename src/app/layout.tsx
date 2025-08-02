@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Afacad } from "next/font/google";
-import "./globals.css";
+import "../styles/main.css";
 
 const afacad = Afacad({
   subsets: ["latin"],

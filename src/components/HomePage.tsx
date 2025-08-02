@@ -15,8 +15,8 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section className="hero-section">
-        <div className="hero-wrapper h-full relative max-w-7xl mx-auto px-8 py-8">
-          <div className="logo-container">
+        <div className="hero-wrapper h-auto lg:h-full relative max-w-7xl mx-auto px-8 py-8">
+          <div className="flex items-center gap-2 justify-center lg:justify-start mb-8 lg:mb-0">
             <Image
               src="/assets/images/logo-dark.svg"
               alt="Anfold"
@@ -27,8 +27,8 @@ export default function HomePage() {
             <h3 className="font-medium mb-0 text-2xl">Anfold</h3>
           </div>
 
-          <div className="hero-top-content">
-            <h1 className="font-bold text-display-3 hero-title mb-0">
+          <div className="flex flex-1 flex-col justify-end mb-8 lg:mb-0">
+            <h1 className="font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.1] hero-title mb-0">
               Your AI companion for
               <br />
               <span className="text-gradient">healthier living.</span>
@@ -37,14 +37,14 @@ export default function HomePage() {
 
           <div className="hero-content-box">
             <div className="hero-content-inner">
-              <p className="text-2xl mb-4">
+              <p className="text-2xl mb-6">
                 <span className="font-bold">Anfold</span> is your personal guide
                 to nutrition and exercise, designed to adapt to your lifestyle
                 and help you connect the dots between your daily choices and
                 your overall wellbeing.
               </p>
 
-              <div className="flex justify-start">
+              <div className="flex justify-center lg:justify-start">
                 <a
                   href="https://apps.apple.com/de/app/golem-app/id6476163056?itscg=30200&itsct=apps_box_badge&mttnsubad=6476163056"
                   className="app-store-badge"

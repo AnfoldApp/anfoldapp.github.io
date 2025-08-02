@@ -5,4 +5,12 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  theme: {
+    extend: {
+      // Enable CSS custom properties for screens
+      screens: {
+        // Tailwind's default breakpoints remain, but now accessible as CSS variables
+      },
+    },
+  },
 };
