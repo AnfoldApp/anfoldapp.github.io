@@ -13,8 +13,48 @@ export const metadata: Metadata = {
   description:
     "Anfold is a personal guide to wellness, designed to embrace the nuances of your lifestyle.",
   icons: {
-    icon: "/assets/favicon/favicon.ico",
-    apple: "/assets/favicon/apple-touch-icon.png",
+    icon: [
+      {
+        url: "/assets/favicon/favicon-16x16.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
+      {
+        url: "/assets/favicon/favicon-32x32.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+      { url: "/assets/favicon/favicon.ico", sizes: "any" },
+    ],
+    apple: [
+      {
+        url: "/assets/favicon/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
+    other: [
+      {
+        rel: "android-chrome",
+        url: "/assets/favicon/android-chrome-192x192.png",
+        sizes: "192x192",
+      },
+      {
+        rel: "android-chrome",
+        url: "/assets/favicon/android-chrome-512x512.png",
+        sizes: "512x512",
+      },
+    ],
+  },
+  manifest: "/assets/favicon/site.webmanifest",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Anfold",
+  },
+  other: {
+    "msapplication-TileColor": "#6BCB77",
+    "theme-color": "#6BCB77",
   },
 };
 
