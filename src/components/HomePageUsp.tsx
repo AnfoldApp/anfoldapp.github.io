@@ -65,18 +65,27 @@ export default function HomePageUsp({
 
           <div className="relative z-10">
             <div className="relative inline-block">
+              {/* <Icon
+                className="usp-placeholder-icon usp-placeholder-icon-1 absolute top-3 left-3"
+                strokeWidth={1.5}
+                color="var(--mint-darker)"
+              /> */}
               <Icon
-                className="usp-placeholder-icon absolute top-2 right-1"
+                className="usp-placeholder-icon usp-placeholder-icon-1 absolute top-2 left-2"
                 strokeWidth={1.5}
                 color="var(--mint-dark)"
               />
               <Icon
-                className="usp-placeholder-icon absolute top-1 left-1"
+                className="usp-placeholder-icon usp-placeholder-icon-2 absolute top-1 left-1"
                 strokeWidth={1.5}
                 color="var(--mint-main)"
               />
 
-              <Icon className="usp-placeholder-icon relative" strokeWidth={2} />
+              <Icon
+                className="usp-placeholder-icon relative"
+                strokeWidth={2}
+                color="var(--charcoal-darkest)"
+              />
             </div>
           </div>
         </div>

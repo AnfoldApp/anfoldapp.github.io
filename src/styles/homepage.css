@@ -53,7 +53,10 @@
 .usp-placeholder-icon {
   width: 120px;
   height: 120px;
-  color: var(--charcoal-darker);
+}
+
+.usp-placeholder-icon-1 {
+  /* filter: drop-shadow(0 0 8px color-mix(in srgb, var(--charcoal-darkest) 30%, transparent)); */
 }
 
 .usp-section .row {
@@ -102,13 +105,10 @@
   stroke-width: 1.5;
 }
 
-/* Hero doodles - original styling */
 .hero-doodles .doodle {}
 
-/* USP doodles - slightly different styling */
 .usp-doodles .doodle {}
 
-/* Hero doodle positioning */
 .hero-doodles .hero-doodle-1 {
   width: 32px;
   height: 32px;
