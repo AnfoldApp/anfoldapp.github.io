@@ -1,19 +1,103 @@
 @import "tailwindcss";
 @import '../styles/anfold.css';
+@import '../styles/homepage.css';
 
 :root {
-  /* Color Variables */
-  --primary-bg: #F9FAF5;
-  --primary-text: #2D2D2D;
+  /* Cobalt Color Palette */
+  --cobalt-lightest: #dae6fb;
+  --cobalt-lighter: #a0c0f3;
+  --cobalt-light: #709aec;
+  --cobalt-main: #4175E6;
+  --cobalt-dark: #3869E2;
+  --cobalt-darker: #1e3871;
+  --cobalt-darkest: #0f1c39;
+  
+  /* Mint Color Palette */
+  --mint-lightest: #dbf5e0;
+  --mint-lighter: #aeeab9;
+  --mint-light: #8edb99;
+  --mint-main: #6BCB77;
+  --mint-dark: #56a860;
+  --mint-darker: #418649;
+  --mint-darkest: #2c6332;
+  
+  /* Crimson Color Palette */
+  --crimson-lightest: #f5d8d7;
+  --crimson-lighter: #e79d9a;
+  --crimson-light: #d86d69;
+  --crimson-main: #CA3C36;
+  --crimson-dark: #BA3123;
+  --crimson-darker: #8d251b;
+  --crimson-darkest: #5f1912;
+  
+  /* Tangerine Color Palette */
+  --tangerine-lightest: #fae3d6;
+  --tangerine-lighter: #f3b89d;
+  --tangerine-light: #ee9469;
+  --tangerine-main: #E97030;
+  --tangerine-dark: #E06737;
+  --tangerine-darker: #b4502c;
+  --tangerine-darkest: #792f16;
+  
+  /* Charcoal Color Palette */
+  --charcoal-lightest: #e0e0e0;
+  --charcoal-lighter: #b3b3b3;
+  --charcoal-light: #8a8a8a;
+  --charcoal-main: #5C5C5C;
+  --charcoal-dark: #444444;
   --charcoal-darker: #2D2D2D;
-  --green-darker: #418649;
-  --green-dark: #56a860;
-  --green-main: #6BCB77;
+  --charcoal-darkest: #1a1a1a;
+  
+  /* Magenta Color Palette */
+  --magenta-lightest: #ecd7ef;
+  --magenta-lighter: #d19cd8;
+  --magenta-light: #bc69c6;
+  --magenta-main: #A73BB3;
+  --magenta-dark: #9A2FAB;
+  --magenta-darker: #741e83;
+  --magenta-darkest: #4d1458;
+  
+  /* Almond Color Palette */
+  --almond-lightest: #F7F6F1;
+  --almond-lighter: #EDEBE2;
+  --almond-light: #E1DFD3;
+  --almond-main: #D5D2C3;
+  --almond-dark: #ABA999;
+  --almond-darker: #807F6F;
+  --almond-darkest: #56544A;
+  
+  /* Blueberry Color Palette */
+  --blueberry-lightest: #E6F0FB;
+  --blueberry-lighter: #B3D3F4;
+  --blueberry-light: #80B7ED;
+  --blueberry-main: #4A90E2;
+  --blueberry-dark: #3A78C2;
+  --blueberry-darker: #2E61A0;
+  --blueberry-darkest: #1F426B;
+  
+  /* Light Green Color Palette */
+  --light-green-lightest: #FEFEFD;
+  --light-green-lighter: #FCFCFB;
+  --light-green-light: #FBFBF8;
+  --light-green-main: #F9FAF5;
+  --light-green-dark: #F7F9F2;
+  --light-green-darker: #F6F8EF;
+  --light-green-darkest: #F4F6ED;
+
+  --light-green-alt: #D0E5D0;
+
+  /* Color Variables */
+  --primary-bg: --light-green-main;
+  --primary-text: var(--charcoal-darker);
+  --green-darker: var(--mint-darker);
+  --green-dark: var(--mint-dark);
+  --green-main: var(--mint-main);
   --white: #FFFFFF;
-  --border-color: #EDEBE2;
-  --hero-gradient-start: #D0E5D0;
+  --black: #000000;
+  --border-color: var(--almond-lighter);
+  --hero-gradient-start: var(--light-green-alt);
   --hero-gradient-end: transparent;
-  --hero-background: #D0E5D0;
+  --hero-background: var(--light-green-alt);
   
   /* Typography */
   --font-family: 'Afacad', sans-serif;

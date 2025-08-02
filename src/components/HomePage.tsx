@@ -6,8 +6,16 @@ import {
   BarChart3,
   MessageCircle,
   Settings,
+  BookHeart,
+  Target,
+  Feather,
+  FilePieChart,
+  FileChartColumn,
+  BotMessageSquare,
+  Lightbulb,
 } from "lucide-react";
 import HeroDoodles from "./HeroDoodles";
+import HomePageUsp from "./HomePageUsp";
 
 export default function HomePage() {
   return (
@@ -77,110 +85,53 @@ export default function HomePage() {
 
       <section className="usp-section py-20">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="flex flex-col lg:flex-row gap-12 items-center py-20">
-            <div className="w-full lg:w-1/2 mb-4 lg:mb-0">
-              <h2 className="font-bold text-2xl mb-3">
-                Your Whole Health,{" "}
-                <span className="text-gradient">One Journal</span>
-              </h2>
-              <p className="text-lg opacity-75">
-                Track meals, workouts, and wellbeing notes all in one place, AI
-                turns your entries into meaningful insights.
-              </p>
-            </div>
-            <div className="w-full lg:w-1/2">
-              <div className="usp-placeholder bg-gray-100 rounded-[40px] p-20 text-center">
-                <BookOpen className="usp-placeholder-icon" />
-              </div>
-            </div>
-          </div>
+          <HomePageUsp
+            titlePart1="Your Lifestyle, "
+            titlePart2="One Journal"
+            description="Track meals, workouts, and wellbeing notes all in one place, AI turns your entries into meaningful insights."
+            icon={BookHeart}
+            illustrationPlacement="right"
+          />
 
-          <div className="flex flex-col lg:flex-row gap-12 items-center py-20">
-            <div className="w-full lg:w-1/2 lg:order-2 mb-4 lg:mb-0">
-              <h2 className="font-bold text-2xl mb-3">
-                Made for Your Life,{" "}
-                <span className="text-gradient">Not Someone Else&apos;s</span>
-              </h2>
-              <p className="text-lg opacity-75">
-                Anfold adapts to your goals, preferences, and health factors for
-                advice that actually fits you.
-              </p>
-            </div>
-            <div className="w-full lg:w-1/2 lg:order-1">
-              <div className="usp-placeholder bg-gray-100 rounded-[40px] p-20 text-center">
-                <UserCheck className="usp-placeholder-icon" />
-              </div>
-            </div>
-          </div>
+          <HomePageUsp
+            titlePart1="Wellbeing, "
+            titlePart2="Adapted to You"
+            description="Anfold adapts to your goals, preferences, and health factors for insights and advice that actually fits you."
+            icon={Target}
+            illustrationPlacement="left"
+          />
 
-          <div className="flex flex-col lg:flex-row gap-12 items-center py-20">
-            <div className="w-full lg:w-1/2 mb-4 lg:mb-0">
-              <h2 className="font-bold text-2xl mb-3">
-                No More <span className="text-gradient">Clunky Logging</span>
-              </h2>
-              <p className="text-lg opacity-75">
-                Just describe your meal or workout in your own words, Anfold
-                handles the nutrition facts, calories, and data crunching.
-              </p>
-            </div>
-            <div className="w-full lg:w-1/2">
-              <div className="usp-placeholder bg-gray-100 rounded-[40px] p-20 text-center">
-                <Edit3 className="usp-placeholder-icon" />
-              </div>
-            </div>
-          </div>
+          <HomePageUsp
+            titlePart1="Detailed Tracking, "
+            titlePart2="In Your Own Words"
+            description="Just describe your meal or workout in your own words, Anfold handles the nutrition facts, calories, and data crunching."
+            icon={Feather}
+            illustrationPlacement="right"
+          />
 
-          <div className="flex flex-col lg:flex-row gap-12 items-center py-20">
-            <div className="w-full lg:w-1/2 lg:order-2 mb-4 lg:mb-0">
-              <h2 className="font-bold text-2xl mb-3">
-                Beyond <span className="text-gradient">Calories</span>
-              </h2>
-              <p className="text-lg opacity-75">
-                See full macro and micronutrient breakdowns, activity impact,
-                and how everything ties into your bigger health picture.
-              </p>
-            </div>
-            <div className="w-full lg:w-1/2 lg:order-1">
-              <div className="usp-placeholder bg-gray-100 rounded-[40px] p-20 text-center">
-                <BarChart3 className="usp-placeholder-icon" />
-              </div>
-            </div>
-          </div>
+          <HomePageUsp
+            titlePart1="Full Context, "
+            titlePart2="Beyond Calories"
+            description="See full macro and micronutrient breakdowns, activity impact, and how everything ties into your bigger health picture."
+            icon={FileChartColumn}
+            illustrationPlacement="left"
+          />
 
-          <div className="flex flex-col lg:flex-row gap-12 items-center py-20">
-            <div className="w-full lg:w-1/2 mb-4 lg:mb-0">
-              <h2 className="font-bold text-2xl mb-3">
-                Talk to <span className="text-gradient">Your Data</span>
-              </h2>
-              <p className="text-lg opacity-75">
-                Ask questions, get explanations, or even vent, Anfold&apos;s
-                contextual chat understands your entries and responds with
-                useful advice.
-              </p>
-            </div>
-            <div className="w-full lg:w-1/2">
-              <div className="usp-placeholder bg-gray-100 rounded-[40px] p-20 text-center">
-                <MessageCircle className="usp-placeholder-icon" />
-              </div>
-            </div>
-          </div>
+          <HomePageUsp
+            titlePart1="Chat with "
+            titlePart2="Your Data"
+            description="Ask questions, get explanations, or even vent, Anfold's contextual chat understands your entries and responds with useful advice."
+            icon={BotMessageSquare}
+            illustrationPlacement="right"
+          />
 
-          <div className="flex flex-col lg:flex-row gap-12 items-center py-20">
-            <div className="w-full lg:w-1/2 lg:order-2 mb-4 lg:mb-0">
-              <h2 className="font-bold text-2xl mb-3">
-                More Than <span className="text-gradient">Tracking</span>
-              </h2>
-              <p className="text-lg opacity-75">
-                Need a meal plan? A workout outline? Or just a quick analysis of
-                dinner? Anfold goes beyond logging to help you take action.
-              </p>
-            </div>
-            <div className="w-full lg:w-1/2 lg:order-1">
-              <div className="usp-placeholder bg-gray-100 rounded-[40px] p-20 text-center">
-                <Settings className="usp-placeholder-icon" />
-              </div>
-            </div>
-          </div>
+          <HomePageUsp
+            titlePart1="Take Action with "
+            titlePart2="Practical Tools"
+            description="Need a meal plan? A workout outline? Or just a quick analysis of dinner? Anfold goes beyond logging to help you take action."
+            icon={Lightbulb}
+            illustrationPlacement="left"
+          />
         </div>
       </section>
     </>
