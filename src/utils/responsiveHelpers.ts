@@ -91,8 +91,8 @@ export const getResponsiveCSS = (
  */
 export const createResponsiveStyles = (
   config: ResponsiveStyleConfig
-): Record<string, any> => {
-  const styles: Record<string, any> = {};
+): Record<string, string> => {
+  const styles: Record<string, string> = {};
 
   Object.entries(config).forEach(([property, values]) => {
     if (typeof values === "object" && values !== null) {

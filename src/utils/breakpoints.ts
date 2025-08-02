@@ -1,4 +1,4 @@
-// @ts-ignore - resolveConfig doesn't have TypeScript declarations
+// @ts-expect-error - resolveConfig doesn't have TypeScript declarations
 import resolveConfig from "tailwindcss/resolveConfig";
 import tailwindConfig from "../../tailwind.config.js";
 
