@@ -79,7 +79,7 @@ export default function HomePage() {
       </section>
 
       <section className="usp-section py-20">
-        <div className="container mx-auto px-8 max-w-7xl">
+        <div className="container mx-auto px-8 max-w-7xl flex flex-col gap-24 md:gap-30 lg:gap-40">
           <HomePageUsp
             titlePart1="Your Lifestyle, "
             titlePart2="One Journal"

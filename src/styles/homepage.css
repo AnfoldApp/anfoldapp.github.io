@@ -21,19 +21,19 @@
 
 @keyframes floatIcon {
   0%, 100% {
-    transform: translateY(0px) rotate(var(--rotation));
+    transform: translateX(0px) translateY(0px);
   }
   50% {
-    transform: translateY(-10px) rotate(var(--rotation));
+    transform: translateX(4px) translateY(8px);
   }
 }
 
 @keyframes floatIconAlt {
   0%, 100% {
-    transform: translateY(0px) rotate(var(--rotation));
+    transform: translateX(0px) translateY(0px);
   }
   50% {
-    transform: translateY(-8px) rotate(var(--rotation));
+    transform: translateX(2px) translateY(4px);
   }
 }
 
@@ -115,28 +115,30 @@
 }
 
 .usp-placeholder {
-  min-height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* background: var(--gradient-primary); */
   background: var(--hero-background);
 }
 
 .usp-placeholder-icon {
-  width: 120px;
-  height: 120px;
+  position: relative;
+}
+
+.usp-placeholder-icon-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .usp-placeholder-icon-1 {
-  /* filter: drop-shadow(0 0 8px color-mix(in srgb, var(--charcoal-darkest) 30%, transparent)); */
-  animation: floatIcon 4.3s ease-in-out infinite;
+  top: 4px;
+  left: 4px;
+  animation: floatIcon 4s ease-in-out infinite;
   animation-delay: 0.2s;
 }
 
 .usp-placeholder-icon-2 {
-  animation: floatIconAlt 3.9s ease-in-out infinite;
-  animation-delay: 0.8s;
+  top: 2px;
+  left: 2px;
+  animation: floatIconAlt 4s ease-in-out infinite;
 }
 
 .usp-section .row {

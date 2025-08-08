@@ -26,20 +26,20 @@ export default function HomePageUsp({
   illustrationPlacement = "left",
 }: HomePageUspProps) {
   return (
-    <div className="flex flex-col lg:flex-row gap-12 items-center py-20">
+    <div className="flex flex-col lg:flex-row gap-16 items-center flex-1">
       <div className="w-full lg:w-1/2 lg:order-2 mb-4 lg:mb-0">
-        <h1 className="font-bold text-4xl mb-3">
+        <h1 className="font-bold text-4xl lg:text-4xl mb-3">
           {titlePart1}
           <span className="text-gradient">{titlePart2}</span>
         </h1>
-        <p className="text-xl opacity-75">{description}</p>
+        <p className="text-2xl opacity-75">{description}</p>
       </div>
       <div
         className={`w-full lg:w-1/2 ${
           illustrationPlacement === "left" ? "lg:order-1" : "lg:order-2"
         }`}
       >
-        <div className="usp-placeholder bg-gray-100 rounded-[40px] p-20 text-center relative overflow-hidden">
+        <div className="usp-placeholder bg-gray-100 rounded-[40px] p-20 text-center relative overflow-hidden flex items-center justify-center min-h-[30vh] md:min-h-[40vh] lg:min-h-[60vh]">
           <div className="usp-doodles">
             <Dumbbell className="doodle usp-doodle-1" />
             <GlassWater className="doodle usp-doodle-2" />
@@ -63,28 +63,29 @@ export default function HomePageUsp({
             <Leaf className="doodle usp-doodle-18" />
           </div>
 
-          <div className="relative z-10">
-            <div className="relative inline-block">
-              {/* <Icon
-                className="usp-placeholder-icon usp-placeholder-icon-1 absolute top-3 left-3"
-                strokeWidth={1.5}
-                color="var(--mint-darker)"
-              /> */}
+          <div className="z-10">
+            <div className="relative">
               <Icon
-                className="usp-placeholder-icon usp-placeholder-icon-1 absolute top-2 left-2"
+                className="usp-placeholder-icon-shadow usp-placeholder-icon-1 z-1"
                 strokeWidth={1.5}
                 color="var(--mint-dark)"
+                width={140}
+                height={140}
               />
               <Icon
-                className="usp-placeholder-icon usp-placeholder-icon-2 absolute top-1 left-1"
+                className="usp-placeholder-icon-shadow usp-placeholder-icon-2 z-2"
                 strokeWidth={1.5}
                 color="var(--mint-main)"
+                width={140}
+                height={140}
               />
 
               <Icon
-                className="usp-placeholder-icon relative"
+                className="usp-placeholder-icon z-10"
                 strokeWidth={2}
                 color="var(--charcoal-darkest)"
+                width={140}
+                height={140}
               />
             </div>
           </div>
