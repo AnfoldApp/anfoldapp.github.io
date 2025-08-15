@@ -20,20 +20,38 @@
 }
 
 @keyframes floatIcon {
-  0%, 100% {
+  0% {
     transform: translateX(0px) translateY(0px);
+  }
+  25% {
+    transform: translateX(6px) translateY(12px);
   }
   50% {
     transform: translateX(6px) translateY(12px);
   }
+  75% {
+    transform: translateX(0px) translateY(0px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
 }
 
 @keyframes floatIconAlt {
-  0%, 100% {
+  0% {
     transform: translateX(0px) translateY(0px);
+  }
+  25% {
+    transform: translateX(3px) translateY(6px);
   }
   50% {
     transform: translateX(3px) translateY(6px);
+  }
+  75% {
+    transform: translateX(0px) translateY(0px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
   }
 }
 
@@ -144,14 +162,14 @@
 .usp-placeholder-icon-1 {
   top: 0;
   left: 0;
-  animation: floatIcon 4s ease-in-out infinite;
+  animation: floatIcon 16s ease-in-out infinite;
   animation-delay: 0.2s;
 }
 
 .usp-placeholder-icon-2 {
   top: 0;
   left: 0;
-  animation: floatIconAlt 4s ease-in-out infinite;
+  animation: floatIconAlt 16s ease-in-out infinite;
 }
 
 .usp-section .row {
