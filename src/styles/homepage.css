@@ -19,17 +19,17 @@
   }
 }
 
-@keyframes floatIcon {
+/* @keyframes floatIcon {
   0% {
     transform: translateX(0px) translateY(0px);
   }
-  25% {
-    transform: translateX(6px) translateY(12px);
+  35% {
+    transform: translateX(8px) translateY(12px);
   }
-  50% {
-    transform: translateX(6px) translateY(12px);
+  55% {
+    transform: translateX(8px) translateY(12px);
   }
-  75% {
+  80% {
     transform: translateX(0px) translateY(0px);
   }
   100% {
@@ -41,13 +41,55 @@
   0% {
     transform: translateX(0px) translateY(0px);
   }
-  25% {
-    transform: translateX(3px) translateY(6px);
+  35% {
+    transform: translateX(4px) translateY(6px);
   }
-  50% {
-    transform: translateX(3px) translateY(6px);
+  55% {
+    transform: translateX(4px) translateY(6px);
   }
-  75% {
+  80% {
+    transform: translateX(0px) translateY(0px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+} */
+
+@keyframes floatIcon {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  10% {
+    transform: translateX(0px) translateY(0px);
+  }
+  43% {
+    transform: translateX(8px) translateY(12px);
+  }
+  57% {
+    transform: translateX(8px) translateY(12px);
+  }
+  90% {
+    transform: translateX(0px) translateY(0px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+@keyframes floatIconAlt {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  10% {
+    transform: translateX(0px) translateY(0px);
+  }
+  43% {
+    transform: translateX(4px) translateY(6px);
+  }
+  57% {
+    transform: translateX(4px) translateY(6px);
+  }
+  90% {
     transform: translateX(0px) translateY(0px);
   }
   100% {
@@ -162,14 +204,14 @@
 .usp-placeholder-icon-1 {
   top: 0;
   left: 0;
-  animation: floatIcon 16s ease-in-out infinite;
-  animation-delay: 0.2s;
+  animation: floatIcon 12s ease-in-out infinite;
 }
 
 .usp-placeholder-icon-2 {
   top: 0;
   left: 0;
-  animation: floatIconAlt 16s ease-in-out infinite;
+  animation: floatIconAlt 12s ease-in-out infinite;
+  animation-delay: 0.2s;
 }
 
 .usp-section .row {
