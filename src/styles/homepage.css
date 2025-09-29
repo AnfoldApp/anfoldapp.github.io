@@ -59,17 +59,11 @@
   0% {
     transform: translateX(0px) translateY(0px);
   }
-  10% {
-    transform: translateX(0px) translateY(0px);
-  }
   43% {
     transform: translateX(8px) translateY(12px);
   }
   57% {
     transform: translateX(8px) translateY(12px);
-  }
-  90% {
-    transform: translateX(0px) translateY(0px);
   }
   100% {
     transform: translateX(0px) translateY(0px);
@@ -80,17 +74,11 @@
   0% {
     transform: translateX(0px) translateY(0px);
   }
-  10% {
-    transform: translateX(0px) translateY(0px);
-  }
   43% {
     transform: translateX(4px) translateY(6px);
   }
   57% {
     transform: translateX(4px) translateY(6px);
-  }
-  90% {
-    transform: translateX(0px) translateY(0px);
   }
   100% {
     transform: translateX(0px) translateY(0px);
@@ -204,13 +192,13 @@
 .usp-placeholder-icon-1 {
   top: 0;
   left: 0;
-  animation: floatIcon 12s ease-in-out infinite;
+  animation: floatIcon 9s ease-in-out infinite;
 }
 
 .usp-placeholder-icon-2 {
   top: 0;
   left: 0;
-  animation: floatIconAlt 12s ease-in-out infinite;
+  animation: floatIconAlt 9s ease-in-out infinite;
   animation-delay: 0.2s;
 }
 
