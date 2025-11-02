@@ -34,6 +34,15 @@
   --tangerine-dark: #E06737;
   --tangerine-darker: #b4502c;
   --tangerine-darkest: #792f16;
+
+  /* Amber Color Palette */
+  --amber-lightest: #ffe8d1;
+  --amber-lighter: #ffc68a;
+  --amber-light: #ffa855;
+  --amber-main: #FF8C00;
+  --amber-dark: #E67E00;
+  --amber-darker: #B36200;
+  --amber-darkest: #804600;
   
   /* Charcoal Color Palette */
   --charcoal-lightest: #e0e0e0;
