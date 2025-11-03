@@ -12,12 +12,13 @@ import {
   TrendingUp,
   BookOpen,
   Dumbbell,
+  Pencil,
 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Exercise System Overview | Anfold",
   description:
-    "Understand Anfold's exercise load metrics: Cardio Load and Muscle Load. Learn how inputs like duration, intensity, and heart rate are used to compute practical training load points.",
+    "Understand Anfold's exercise metrics: Cardio Load, Muscle Load, and Total Load. Learn how duration, intensity, activity type and heart rate inform practical training load points.",
 };
 
 export default function Exercise() {
@@ -39,9 +40,10 @@ export default function Exercise() {
           <h5 className="text-xl font-semibold mb-1">Introduction</h5>
           <p className="mb-2">
             Anfold helps you understand the training impact of your activities.
-            We convert your exercise entries into two simple metrics that
-            summarize whole-body and muscle-specific effort using established
-            methods from exercise science, adapted for everyday logging.
+            We convert your exercise entries into three simple metrics that
+            summarize whole-body effort, muscle-specific stress, and overall
+            recovery demand using established methods from exercise science,
+            adapted for everyday logging.
           </p>
           <p>
             Our approach is input-aware: when objective data (like heart rate)
@@ -54,7 +56,7 @@ export default function Exercise() {
           <div className="flex items-center gap-2 mb-2">
             <Gauge strokeWidth={1.5} className="w-6 h-6 text-green-main" />
             <h5 className="text-xl font-semibold">
-              The Two Metrics You&apos;ll See
+              The Three Metrics You&apos;ll See
             </h5>
           </div>
           <ul className="list-disc list-inside space-y-1 mb-2">
@@ -65,10 +67,14 @@ export default function Exercise() {
             <li>
               <strong>Muscle Load</strong>: Per-muscle mechanical effort points
             </li>
+            <li>
+              <strong>Total Load</strong>: Combined recovery demand estimate of
+              overall training stress
+            </li>
           </ul>
           <p>
             These metrics are designed for daily understanding and
-            week-over-week comparisons. They are unitless “points” derived from
+            week-over-week comparisons. They are unitless points derived from
             duration, intensity, modality and, when available, heart rate.
           </p>
         </div>
@@ -94,8 +100,7 @@ export default function Exercise() {
               Allocates muscle load to muscle groups based on the entry context
             </li>
             <li>
-              Returns Cardio Load and Muscle Load for the entry and aggregates
-              them over time
+              Returns Cardio, Muscle, and Total Load and aggregates over time
             </li>
           </ul>
           <p>You’ll see results immediately after saving your entry.</p>
@@ -110,7 +115,7 @@ export default function Exercise() {
           </div>
 
           <h6 className="text-lg font-semibold mb-1">
-            Strength and Calisthenics (INOL-based)
+            Strength and Calisthenics (Enhanced INOL-based)
           </h6>
           <ul className="list-disc list-inside space-y-1 mb-2">
             <li>
@@ -125,6 +130,16 @@ export default function Exercise() {
               </ul>
             </li>
             <li>
+              Automatically adjusts for workout style: moderate-weight, higher
+              reps (hypertrophy) credit metabolic stress appropriately
+            </li>
+            <li>
+              Slower tempos increase load to reflect longer time under tension
+            </li>
+            <li>
+              Accounts for eccentric (lowering) phase contributing extra stress
+            </li>
+            <li>
               Systemic (cardio) component includes only active
               time-under-tension, not rest
             </li>
@@ -134,12 +149,13 @@ export default function Exercise() {
             </li>
           </ul>
           <p className="mb-2">
-            What this captures: heavier sets and more total work increase load;
-            selecting target muscles allocates that work appropriately.
+            What this captures: heavier sets, more volume, and slower tempos all
+            increase load appropriately; involved muscle groups are credited for
+            their share of the work.
           </p>
 
           <h6 className="text-lg font-semibold mb-1">
-            Cardio, Sports, Circuits, HIIT (sRPE/HRR-guided)
+            Cardio, Sports, Circuits, HIIT (Enhanced sRPE/HRR-guided)
           </h6>
           <ul className="list-disc list-inside space-y-1 mb-2">
             <li>
@@ -151,8 +167,16 @@ export default function Exercise() {
               available
             </li>
             <li>
-              Uses an intensity curve that grows with both time and effort to
-              reflect session difficulty
+              Uses a scientifically-informed intensity curve that captures how
+              effort compounds at higher intensities
+            </li>
+            <li>
+              Accounts for activity-specific stress: e.g., running can accrue
+              higher muscle load than cycling at the same cardio effort
+            </li>
+            <li>
+              High-impact sports (basketball, soccer) are weighted vs. lower-
+              impact activities (swimming, cycling)
             </li>
             <li>
               Per-muscle loads use muscle groups to apportion mechanical demand
@@ -160,22 +184,28 @@ export default function Exercise() {
             </li>
           </ul>
           <p className="mb-2">
-            What this captures: longer and/or harder sessions create higher
-            systemic demand; HR data refines intensity when available.
+            What this captures: longer and/or harder sessions raise systemic
+            demand; different activities stress muscles differently even at
+            similar intensities; HR data refines accuracy when available.
           </p>
 
           <h6 className="text-lg font-semibold mb-1">
-            Mobility, Flexibility, Balance (Gentle Intensity Model)
+            Mobility, Flexibility, Balance (Enhanced Gentle Model)
           </h6>
           <ul className="list-disc list-inside space-y-1 mb-2">
             <li>Uses a lighter intensity band suitable for gentle work</li>
+            <li>
+              Distinguishes passive vs. active work: restorative stretching gets
+              minimal load; active mobility earns credit for muscular control
+            </li>
             <li>
               Computes muscle and systemic loads using conservative scaling
             </li>
           </ul>
           <p>
             What this captures: meaningful but lighter stimulus appropriate for
-            low-intensity movement.
+            low-intensity movement, with proper distinction between restorative
+            and active mobility work.
           </p>
         </div>
 
@@ -190,7 +220,7 @@ export default function Exercise() {
             </li>
             <li>Duration (minutes)</li>
             <li>
-              Subjective intensity (sRPE 1–10) and/or heart rate fields
+              Subjective intensity (sRPE 1-10) and/or heart rate fields
               (resting, mean, max)
             </li>
             <li>
@@ -207,6 +237,24 @@ export default function Exercise() {
             determine intensity. Otherwise, sRPE is mapped to an intensity
             fraction.
           </p>
+        </div>
+
+        <div className="mb-4">
+          <div className="flex items-center gap-2 mb-2">
+            <Pencil strokeWidth={1.5} className="w-6 h-6 text-green-main" />
+            <h5 className="text-xl font-semibold">Manual Editing (Planned)</h5>
+          </div>
+          <ul className="list-disc list-inside space-y-1">
+            <li>Edit sets, reps, load, and tempo for strength sessions</li>
+            <li>Adjust subjective intensity (sRPE) or add heart-rate fields</li>
+            <li>
+              Select and adjust muscle groups and their contribution shares
+            </li>
+            <li>
+              Refine activity type/modality to better reflect session stress
+            </li>
+            <li>Override estimates when you have known values</li>
+          </ul>
         </div>
 
         <div className="mb-4">
@@ -236,12 +284,16 @@ export default function Exercise() {
           </div>
           <ul className="list-disc list-inside space-y-1">
             <li>
-              For each entry: Cardio Load, Muscle Load and the list of muscle
-              groups engaged
+              For each entry: Cardio Load, Muscle Load, Total Load, and the
+              engaged muscle groups
             </li>
             <li>
               For daily/weekly views: totals and trends to help you balance
-              training
+              training and manage recovery
+            </li>
+            <li>
+              Total Load provides a single number to track overall training
+              stress and recovery needs
             </li>
           </ul>
         </div>
@@ -279,14 +331,20 @@ export default function Exercise() {
             <h5 className="text-xl font-semibold">Continuous Improvement</h5>
           </div>
           <ul className="list-disc list-inside space-y-1">
+            <li>We continuously refine algorithms based on current research</li>
             <li>
-              We review feedback to refine intensity curves and per-modality
-              factors
+              Better distinction across cardio activities (e.g., running vs.
+              cycling muscle impact)
             </li>
             <li>
-              Future updates may include auto-suggested muscle groups and
-              smarter defaults
+              Smarter handling of strength styles (heavy low-rep vs. moderate
+              high-rep; tempo awareness)
             </li>
+            <li>
+              Active vs. passive mobility differentiation and more accurate
+              intensity scaling
+            </li>
+            <li>Future: auto-suggested muscle groups and smarter defaults</li>
           </ul>
         </div>
 
@@ -301,9 +359,13 @@ export default function Exercise() {
           </p>
           <ul className="list-disc list-inside space-y-1">
             <li>
+              Hristov, P. (2005). Intensity Number of Lifts (INOL) concept for
+              quantifying strength training stress.
+            </li>
+            <li>
               Foster, C. (2001). A new approach to monitoring exercise training.{" "}
               <em>Journal of Strength and Conditioning Research</em>, 15(1),
-              109–115.{" "}
+              109-115.{" "}
               <a
                 href="https://doi.org/10.1519/00124278-200102000-00019"
                 className="with-underline"
@@ -312,9 +374,13 @@ export default function Exercise() {
               </a>
             </li>
             <li>
+              Banister, E. W. (1975). TRIMP (Training Impulse) model with
+              exponential intensity weighting.
+            </li>
+            <li>
               Impellizzeri, F. M., et al. (2004). Use of RPE-based training load
               in soccer. <em>Medicine & Science in Sports & Exercise</em>,
-              36(6), 1042–1047.{" "}
+              36(6), 1042-1047.{" "}
               <a
                 href="https://doi.org/10.1249/01.MSS.0000128199.23901.2F"
                 className="with-underline"
@@ -326,7 +392,7 @@ export default function Exercise() {
               Karvonen, M. J., Kentala, E., & Mustala, O. (1957). The effects of
               training on heart rate.{" "}
               <em>Annales Medicinae Experimentalis et Biologiae Fenniae</em>,
-              35, 307–315. (HRR concept)
+              35, 307-315. (HRR concept)
             </li>
             <li>
               Epley, B. (1985). Poundage chart. In <em>Boyd Epley Workout</em>.
@@ -335,8 +401,20 @@ export default function Exercise() {
               Lander, J. (1985). Maximums and repetitions. University of Kansas.
             </li>
             <li>
-              Hornsby, W., et al. (2018). Modelling the dose–response
+              Hornsby, W., et al. (2018). Modelling the dose-response
               relationship in resistance training. <em>Sports Medicine</em>.
+            </li>
+            <li>
+              Schoenfeld, B. J., et al. Volume load and per-muscle set counting
+              for hypertrophy.
+            </li>
+            <li>
+              Paszek, A. Comparative muscle damage: running vs. cycling at
+              equivalent cardiovascular intensities.
+            </li>
+            <li>
+              Frontiers in Physiology (2021). Integrating external and internal
+              load for monitoring fitness and fatigue status.
             </li>
           </ul>
           <p className="mt-3 o-75">
