@@ -11,6 +11,7 @@ import {
   AlertTriangle,
   TrendingUp,
   BookOpen,
+  Dumbbell,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -23,20 +24,27 @@ export default function Exercise() {
   return (
     <Layout>
       <section className="content-section flex flex-col text-base p-6 max-w-4xl mx-auto">
-        <h3 className="text-3xl font-bold mb-3">Exercise Overview</h3>
+        <div className="flex flex-col items-center mb-12">
+          <Dumbbell
+            strokeWidth={1.5}
+            className="w-20 h-20 mb-4"
+            style={{ color: "var(--cobalt-main)" }}
+          />
+          <h3 className="text-3xl font-bold">Exercise Overview</h3>
+        </div>
 
-        <Disclaimer />
+        <Disclaimer className="mb-8" />
 
         <div className="mb-4">
           <h5 className="text-xl font-semibold mb-1">Introduction</h5>
           <p className="mb-2">
             Anfold helps you understand the training impact of your activities.
             We convert your exercise entries into two simple metrics that
-            summarize whole‑body and muscle‑specific effort using established
+            summarize whole-body and muscle-specific effort using established
             methods from exercise science, adapted for everyday logging.
           </p>
           <p>
-            Our approach is input‑aware: when objective data (like heart rate)
+            Our approach is input-aware: when objective data (like heart rate)
             is available, we prioritize it; when it is not, we fall back to
             reasonable estimates based on the information you provide.
           </p>
@@ -51,17 +59,16 @@ export default function Exercise() {
           </div>
           <ul className="list-disc list-inside space-y-1 mb-2">
             <li>
-              <strong>Cardio Load</strong>: Whole‑body aerobic/systemic effort
-              points (0–∞)
+              <strong>Cardio Load</strong>: Whole-body aerobic/systemic effort
+              points
             </li>
             <li>
-              <strong>Muscle Load</strong>: Per‑muscle mechanical effort points
-              (0–∞)
+              <strong>Muscle Load</strong>: Per-muscle mechanical effort points
             </li>
           </ul>
           <p>
             These metrics are designed for daily understanding and
-            week‑over‑week comparisons. They are unitless “points” derived from
+            week-over-week comparisons. They are unitless “points” derived from
             duration, intensity, modality and, when available, heart rate.
           </p>
         </div>
@@ -77,10 +84,10 @@ export default function Exercise() {
           <ul className="list-disc list-inside space-y-1 mb-2">
             <li>
               Interprets the activity type, duration and intensity (subjective
-              or heart‑rate‑based)
+              or heart-rate-based)
             </li>
             <li>
-              Applies a category‑specific method to compute loads (strength,
+              Applies a category-specific method to compute loads (strength,
               cardio/sports, or mobility)
             </li>
             <li>
@@ -103,11 +110,11 @@ export default function Exercise() {
           </div>
 
           <h6 className="text-lg font-semibold mb-1">
-            Strength and Calisthenics (INOL‑based)
+            Strength and Calisthenics (INOL-based)
           </h6>
           <ul className="list-disc list-inside space-y-1 mb-2">
             <li>
-              Uses an INOL‑style approach (Intensity Number of Lifts) to reflect
+              Uses an INOL-style approach (Intensity Number of Lifts) to reflect
               mechanical demand
             </li>
             <li>
@@ -119,10 +126,10 @@ export default function Exercise() {
             </li>
             <li>
               Systemic (cardio) component includes only active
-              time‑under‑tension, not rest
+              time-under-tension, not rest
             </li>
             <li>
-              Per‑muscle load is split by muscle activation shares for the
+              Per-muscle load is split by muscle activation shares for the
               exercise
             </li>
           </ul>
@@ -132,12 +139,12 @@ export default function Exercise() {
           </p>
 
           <h6 className="text-lg font-semibold mb-1">
-            Cardio, Sports, Circuits, HIIT (sRPE/HRR‑guided)
+            Cardio, Sports, Circuits, HIIT (sRPE/HRR-guided)
           </h6>
           <ul className="list-disc list-inside space-y-1 mb-2">
             <li>
               Prioritizes heart rate reserve (HRR) to set intensity when
-              heart‑rate data is present
+              heart-rate data is present
             </li>
             <li>
               Falls back to a mapped subjective intensity (sRPE) when HR is not
@@ -148,7 +155,7 @@ export default function Exercise() {
               reflect session difficulty
             </li>
             <li>
-              Per‑muscle loads use muscle groups to apportion mechanical demand
+              Per-muscle loads use muscle groups to apportion mechanical demand
               from the session
             </li>
           </ul>
@@ -168,7 +175,7 @@ export default function Exercise() {
           </ul>
           <p>
             What this captures: meaningful but lighter stimulus appropriate for
-            low‑intensity movement.
+            low-intensity movement.
           </p>
         </div>
 
@@ -187,7 +194,7 @@ export default function Exercise() {
               (resting, mean, max)
             </li>
             <li>
-              Strength‑specific fields when relevant (sets, reps, load,
+              Strength-specific fields when relevant (sets, reps, load,
               bodyweight)
             </li>
             <li>
@@ -196,7 +203,7 @@ export default function Exercise() {
             </li>
           </ul>
           <p>
-            When heart‑rate fields are all present and valid, HRR is used to
+            When heart-rate fields are all present and valid, HRR is used to
             determine intensity. Otherwise, sRPE is mapped to an intensity
             fraction.
           </p>
@@ -256,7 +263,7 @@ export default function Exercise() {
             </li>
             <li>Load depends on the quality and completeness of your inputs</li>
             <li>
-              Heart‑rate calculations require resting/mean/max values to be
+              Heart-rate calculations require resting/mean/max values to be
               useful
             </li>
             <li>
@@ -273,11 +280,11 @@ export default function Exercise() {
           </div>
           <ul className="list-disc list-inside space-y-1">
             <li>
-              We review feedback to refine intensity curves and per‑modality
+              We review feedback to refine intensity curves and per-modality
               factors
             </li>
             <li>
-              Future updates may include auto‑suggested muscle groups and
+              Future updates may include auto-suggested muscle groups and
               smarter defaults
             </li>
           </ul>
@@ -289,7 +296,7 @@ export default function Exercise() {
             <h5 className="text-xl font-semibold">Further Reading</h5>
           </div>
           <p className="mb-2">
-            Methods are based on well‑known approaches in exercise science and
+            Methods are based on well-known approaches in exercise science and
             professional practice. Selected background materials:
           </p>
           <ul className="list-disc list-inside space-y-1">
@@ -333,7 +340,7 @@ export default function Exercise() {
             </li>
           </ul>
           <p className="mt-3 o-75">
-            Note: We avoid brand‑specific devices or vendor dependencies;
+            Note: We avoid brand-specific devices or vendor dependencies;
             calculations rely on common fields you can enter manually.
           </p>
         </div>

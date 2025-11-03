@@ -11,6 +11,11 @@ import {
   AlertTriangle,
   TrendingUp,
   BookOpen,
+  CheckCircle2,
+  XCircle,
+  Wrench,
+  Bot,
+  Salad,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -23,8 +28,15 @@ export default function Nutrition() {
   return (
     <Layout>
       <section className="content-section flex flex-col text-base p-6 max-w-4xl mx-auto">
-        <h3 className="text-3xl font-bold mb-3">Nutrition Overview</h3>
-        <Disclaimer />
+        <div className="flex flex-col items-center mb-12">
+          <Salad
+            strokeWidth={1.5}
+            className="w-20 h-20 mb-4"
+            style={{ color: "var(--green-main)" }}
+          />
+          <h3 className="text-3xl font-bold">Nutrition Overview</h3>
+        </div>
+        <Disclaimer className="mb-8" />
 
         <div className="mb-4">
           <h5 className="text-xl font-semibold mb-1">Introduction</h5>
@@ -494,16 +506,37 @@ export default function Nutrition() {
           <p className="mb-1">
             Every entry clearly shows its information tier:
           </p>
-          <ul className="list-disc list-inside space-y-1 mb-2">
-            <li>
-              🟢 <strong>Verified Database</strong>: Direct USDA data
+          <ul className="space-y-2 mb-2">
+            <li className="flex items-center gap-2">
+              <Database
+                strokeWidth={1.5}
+                className="w-5 h-5 flex-shrink-0"
+                style={{ color: "var(--mint-main)" }}
+              />
+              <span>
+                <strong>Verified Database</strong>: Direct USDA data
+              </span>
             </li>
-            <li>
-              🔵 <strong>Verified Database, Transformed</strong>: USDA data with
-              scientific transformations
+            <li className="flex items-center gap-2">
+              <Wrench
+                strokeWidth={1.5}
+                className="w-5 h-5 flex-shrink-0"
+                style={{ color: "var(--tangerine-light)" }}
+              />
+              <span>
+                <strong>Verified Database, Transformed</strong>: USDA data with
+                scientific transformations
+              </span>
             </li>
-            <li>
-              🟡 <strong>AI deduced</strong>: AI-estimated values
+            <li className="flex items-center gap-2">
+              <Bot
+                strokeWidth={1.5}
+                className="w-5 h-5 flex-shrink-0"
+                style={{ color: "var(--cobalt-main)" }}
+              />
+              <span>
+                <strong>AI deduced</strong>: AI-estimated values
+              </span>
             </li>
           </ul>
 
@@ -540,26 +573,103 @@ export default function Nutrition() {
           </div>
 
           <h6 className="text-lg font-semibold mb-1">What We Account For</h6>
-          <ul className="list-disc list-inside space-y-1 mb-2">
-            <li>✅ Cooking method effects on nutrients</li>
-            <li>✅ Water loss/gain during preparation</li>
-            <li>✅ Oil absorption during frying</li>
-            <li>✅ Vitamin and mineral retention rates</li>
-            <li>✅ Mass changes from cooking</li>
-            <li>✅ Drained vs. undrained preparations</li>
+          <ul className="space-y-1 mb-2">
+            <li className="flex items-center gap-2">
+              <CheckCircle2
+                strokeWidth={1.5}
+                className="w-4 h-4 flex-shrink-0"
+                style={{ color: "var(--green-main)" }}
+              />
+              <span>Cooking method effects on nutrients</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle2
+                strokeWidth={1.5}
+                className="w-4 h-4 flex-shrink-0"
+                style={{ color: "var(--green-main)" }}
+              />
+              <span>Water loss/gain during preparation</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle2
+                strokeWidth={1.5}
+                className="w-4 h-4 flex-shrink-0"
+                style={{ color: "var(--green-main)" }}
+              />
+              <span>Oil absorption during frying</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle2
+                strokeWidth={1.5}
+                className="w-4 h-4 flex-shrink-0"
+                style={{ color: "var(--green-main)" }}
+              />
+              <span>Vitamin and mineral retention rates</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle2
+                strokeWidth={1.5}
+                className="w-4 h-4 flex-shrink-0"
+                style={{ color: "var(--green-main)" }}
+              />
+              <span>Mass changes from cooking</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle2
+                strokeWidth={1.5}
+                className="w-4 h-4 flex-shrink-0"
+                style={{ color: "var(--green-main)" }}
+              />
+              <span>Drained vs. undrained preparations</span>
+            </li>
           </ul>
 
           <h6 className="text-lg font-semibold mb-1">
             What We Don&apos;t Model
           </h6>
-          <ul className="list-disc list-inside space-y-1 mb-2">
-            <li>❌ Exact cooking time and temperature</li>
-            <li>
-              ❌ Individual equipment variations (oven calibration, pan types)
+          <ul className="space-y-1 mb-2">
+            <li className="flex items-center gap-2">
+              <XCircle
+                strokeWidth={1.5}
+                className="w-4 h-4 flex-shrink-0"
+                style={{ color: "var(--red-main)" }}
+              />
+              <span>Exact cooking time and temperature</span>
             </li>
-            <li>❌ Added seasonings and spices (unless you specify them)</li>
-            <li>❌ Protein digestibility changes</li>
-            <li>❌ Nutrient redistribution in shared cooking liquids</li>
+            <li className="flex items-center gap-2">
+              <XCircle
+                strokeWidth={1.5}
+                className="w-4 h-4 flex-shrink-0"
+                style={{ color: "var(--red-main)" }}
+              />
+              <span>
+                Individual equipment variations (oven calibration, pan types)
+              </span>
+            </li>
+            <li className="flex items-center gap-2">
+              <XCircle
+                strokeWidth={1.5}
+                className="w-4 h-4 flex-shrink-0"
+                style={{ color: "var(--red-main)" }}
+              />
+              <span>Added seasonings and spices (unless you specify them)</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <XCircle
+                strokeWidth={1.5}
+                className="w-4 h-4 flex-shrink-0"
+                style={{ color: "var(--red-main)" }}
+              />
+              <span>Protein digestibility changes</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <XCircle
+                strokeWidth={1.5}
+                className="w-4 h-4 flex-shrink-0"
+                style={{ color: "var(--red-main)" }}
+              />
+              <span>Nutrient redistribution in shared cooking liquids</span>
+            </li>
           </ul>
 
           <h6 className="text-lg font-semibold mb-1">Conservative Approach</h6>
