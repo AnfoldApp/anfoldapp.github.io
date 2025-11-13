@@ -103,15 +103,12 @@ export default function Exercise() {
               Returns Cardio, Muscle, and Total Load and aggregates over time
             </li>
           </ul>
-          <p>You’ll see results immediately after saving your entry.</p>
         </div>
 
         <div className="mb-4">
           <div className="flex items-center gap-2 mb-2">
             <Calculator strokeWidth={1.5} className="w-6 h-6 text-green-main" />
-            <h5 className="text-xl font-semibold">
-              Calculation Methods (At a Glance)
-            </h5>
+            <h5 className="text-xl font-semibold">Calculation Methods</h5>
           </div>
 
           <h6 className="text-lg font-semibold mb-1">
@@ -125,7 +122,7 @@ export default function Exercise() {
             <li>
               Accepts two paths for intensity:
               <ul className="list-disc list-inside ml-6 space-y-1 mt-1">
-                <li>With load: estimates %1RM from load × reps</li>
+                <li>With load: estimates %1RM from load x reps</li>
                 <li>Without load/bodyweight: estimates %1RM from reps alone</li>
               </ul>
             </li>
@@ -237,6 +234,93 @@ export default function Exercise() {
             determine intensity. Otherwise, sRPE is mapped to an intensity
             fraction.
           </p>
+        </div>
+
+        <div className="mb-4">
+          <div className="flex items-center gap-2 mb-2">
+            <Gauge strokeWidth={1.5} className="w-6 h-6 text-green-main" />
+            <h5 className="text-xl font-semibold">Recommended Targets</h5>
+          </div>
+          <ul className="list-disc list-inside space-y-1 mb-2">
+            <li>
+              <strong>Cardio Load</strong>: Daily and weekly ranges are based on
+              time x effort points (sRPExminutes or HR-based TRIMP). Targets are
+              set to encourage steady, sustainable progress from “maintain” to
+              “build” weeks without defaulting to elite volumes.
+            </li>
+            <li>
+              <strong>Muscle Load</strong>: Weekly per-muscle ranges map to a
+              practical number of hard sets using an INOL-style score (accounts
+              for both weight and reps). Daily guidance leaves room for recovery
+              between muscle groups.
+            </li>
+            <li>
+              <strong>Total Load</strong>: Your daily Total Load goal blends
+              ~60% Cardio + ~40% average Muscle Load to reflect that systemic
+              strain often dominates short-term recovery needs while still
+              accounting for local muscle stress.
+            </li>
+            <li>
+              These are conservative defaults. If you have specific goals (e.g.,
+              race build, hypertrophy block), aim higher or lower accordingly.
+            </li>
+          </ul>
+
+          <h6 className="text-lg font-semibold mb-1">Target Examples</h6>
+
+          <p className="mb-1">
+            <strong>Cardio (daily target example)</strong>
+          </p>
+          <ul className="list-disc list-inside space-y-1 mb-2">
+            <li>If your daily cardio target shows ~350 points:</li>
+            <li className="ml-6">40 min easy jog at RPE 6 ≈ 240 points</li>
+            <li className="ml-6">+ 20 min brisk walk at RPE 4 ≈ 80 points</li>
+            <li className="ml-6">
+              Total ≈ 320/350 — different mixes can hit the same target
+            </li>
+          </ul>
+
+          <p className="mb-1">
+            <strong>Cardio (weekly target example)</strong>
+          </p>
+          <ul className="list-disc list-inside space-y-1 mb-2">
+            <li>
+              “Maintain” 1,500-2,500 points ≈ 5 days x 30-45 min at RPE 5-6
+            </li>
+            <li>
+              “Build” 2,500-3,500 points ≈ 5-6 days x 45-60 min at RPE 6-7
+            </li>
+          </ul>
+
+          <p className="mb-1">
+            <strong>Muscle (per-muscle daily/weekly example)</strong>
+          </p>
+          <ul className="list-disc list-inside space-y-1 mb-2">
+            <li>
+              Daily guidance (~0.4-0.9 INOL per muscle) typically looks like 3-4
+              sets of 6-10 reps at moderate weight for that muscle.
+            </li>
+            <li>
+              Weekly “build” (≈3.5-5.0 INOL) is roughly 2-3 focused sessions for
+              the same muscle with recovery days in between.
+            </li>
+            <li>
+              Multi-joint lifts split the score across involved muscles (e.g.,
+              bench → chest, triceps, delts).
+            </li>
+          </ul>
+
+          <p className="mb-1">
+            <strong>Total Load (combined daily example)</strong>
+          </p>
+          <ul className="list-disc list-inside space-y-1">
+            <li>
+              If your daily Total Load target is ~65 points: a run giving Cardio
+              Load 50 + a short lift with average Muscle Load 25 → 0.6x50 +
+              0.4x25 = 50. You&apos;re at 50/65 (~77% of target). Add easy work
+              or stop there on a light day.
+            </li>
+          </ul>
         </div>
 
         <div className="mb-4">
