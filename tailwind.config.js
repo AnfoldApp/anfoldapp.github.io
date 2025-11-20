@@ -7,7 +7,26 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // Enable CSS custom properties for screens
+      colors: {
+        cobalt: {
+          lightest: "var(--cobalt-lightest)",
+          lighter: "var(--cobalt-lighter)",
+          light: "var(--cobalt-light)",
+          main: "var(--cobalt-main)",
+          dark: "var(--cobalt-dark)",
+          darker: "var(--cobalt-darker)",
+          darkest: "var(--cobalt-darkest)",
+        },
+        mint: {
+          lightest: "var(--mint-lightest)",
+          lighter: "var(--mint-lighter)",
+          light: "var(--mint-light)",
+          main: "var(--mint-main)",
+          dark: "var(--mint-dark)",
+          darker: "var(--mint-darker)",
+          darkest: "var(--mint-darkest)",
+        },
+      },
       screens: {
         // Tailwind's default breakpoints remain, but now accessible as CSS variables
       },

@@ -130,23 +130,13 @@ a.with-underline:hover {
 
 
 .header {
-  background: var(--light-green-main);
+  /* background: var(--light-green-main); */
   padding: var(--spacing-md);
   display: flex;
   flex-direction: row;
   align-items: center;
   border: 0 none;
   position: relative;
-}
-
-header:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: var(--almond-lighter);
 }
 
 .header .btn {
@@ -162,7 +152,7 @@ header:after {
   margin-top: auto;
   padding: var(--spacing-lg) var(--spacing-md);
   position: relative;
-  background: var(--light-green-main);
+  /* background: var(--light-green-main); */
 }
 
 footer:before {
@@ -172,7 +162,6 @@ footer:before {
   left: 0;
   width: 100%;
   height: 1px;
-  background: var(--almond-lighter);
 }
 
 .footer a {
@@ -228,6 +217,58 @@ footer:before {
   display: inline-block;
 }
 
+.detail-page-exercise-hero {
+  position: relative;
+  min-height: 50vh;
+  overflow: hidden;
+}
+
+.detail-page-exercise-hero::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/assets/images/detail-page-exercise.png') no-repeat center center;
+  background-size: cover;
+  filter: blur(3px);
+  z-index: 0;
+}
+
+.detail-page-exercise-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.detail-page-nutrition-hero {
+  position: relative;
+  min-height: 50vh;
+  overflow: hidden;
+}
+
+.detail-page-nutrition-hero::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/assets/images/detail-page-nutrition.png') no-repeat center center;
+  background-size: cover;
+  filter: blur(3px);
+  z-index: 0;
+}
+
+.detail-page-nutrition-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
 @media (max-width: 639px) {
   .footer {
     flex-direction: column;
@@ -236,4 +277,58 @@ footer:before {
   .footer a {
     margin: var(--spacing-xs) 0;
   }
+}
+
+.approach-card {
+  position: relative;
+  min-height: 400px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--spacing-lg);
+}
+
+.approach-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.approach-card::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);
+  z-index: 0;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.approach-card:hover::before {
+  transform: scale(1.07);
+  filter: blur(0px);
+}
+
+.approach-card-exercise::before {
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    url('/assets/images/detail-page-exercise.png') no-repeat center center;
+  background-size: cover;
+}
+
+.approach-card-nutrition::before {
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    url('/assets/images/detail-page-nutrition.png') no-repeat center center;
+  background-size: cover;
+}
+
+.approach-card-content {
+  position: relative;
+  z-index: 1;
 }

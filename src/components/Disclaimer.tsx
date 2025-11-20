@@ -10,12 +10,10 @@ import {
 export default function Disclaimer({ className = "" }: { className?: string }) {
   return (
     <div
-      className={`p-4 rounded-lg border ${className}`}
+      className={`p-4 rounded-2xl border ${className}`}
       style={{
-        borderColor:
-          "color-mix(in srgb, var(--amber-lighter) 80%, transparent)",
-        backgroundColor:
-          "color-mix(in srgb, var(--amber-lightest) 20%, transparent)",
+        borderColor: "var(--charcoal-lightest)",
+        // "color-mix(in srgb, var(--amber-lighter) 80%, transparent)",
       }}
     >
       <div className="flex items-center gap-3 mb-3">
@@ -25,12 +23,13 @@ export default function Disclaimer({ className = "" }: { className?: string }) {
           style={{ color: "var(--tangerine-main)" }}
         />
 
-        <p className="font-semibold text-lg">Important</p>
+        <p className="font-semibold text-lg">Please Note</p>
       </div>
       <ul className="space-y-3">
         <li className="flex gap-3">
           <Construction
             strokeWidth={1.5}
+            color="var(--tangerine-main)"
             className="w-5 h-5 mt-0.5 flex-shrink-0 text-charcoal-light"
           />
 
@@ -42,6 +41,7 @@ export default function Disclaimer({ className = "" }: { className?: string }) {
         <li className="flex gap-3">
           <Stethoscope
             strokeWidth={1.5}
+            color="var(--tangerine-main)"
             className="w-5 h-5 mt-0.5 flex-shrink-0 text-charcoal-light"
           />
           <span>
@@ -52,6 +52,7 @@ export default function Disclaimer({ className = "" }: { className?: string }) {
         <li className="flex gap-3">
           <Sparkles
             strokeWidth={1.5}
+            color="var(--tangerine-main)"
             className="w-5 h-5 mt-0.5 flex-shrink-0 text-charcoal-light"
           />
           <span>
@@ -62,6 +63,7 @@ export default function Disclaimer({ className = "" }: { className?: string }) {
         <li className="flex gap-3">
           <Bot
             strokeWidth={1.5}
+            color="var(--tangerine-main)"
             className="w-5 h-5 mt-0.5 flex-shrink-0 text-charcoal-light"
           />
           <span>
@@ -72,6 +74,7 @@ export default function Disclaimer({ className = "" }: { className?: string }) {
         <li className="flex gap-3">
           <ShieldAlert
             strokeWidth={1.5}
+            color="var(--tangerine-main)"
             className="w-5 h-5 mt-0.5 flex-shrink-0 text-charcoal-light"
           />
           <span>

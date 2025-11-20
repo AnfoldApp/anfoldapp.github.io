@@ -4,7 +4,6 @@ import {
   Target,
   Feather,
   FileChartColumn,
-  BotMessageSquare,
   Lightbulb,
 } from "lucide-react";
 import HeroDoodles from "./HeroDoodles";
@@ -81,50 +80,42 @@ export default function HomePage() {
       <section className="usp-section py-20">
         <div className="container mx-auto px-8 max-w-7xl flex flex-col gap-24 md:gap-30 lg:gap-40">
           <HomePageUsp
-            titlePart1="Your Lifestyle, "
-            titlePart2="One Journal"
-            description="Track meals, workouts, and wellbeing notes all in one place, AI turns your entries into meaningful insights."
+            titlePart1="Log Your Day, "
+            titlePart2="Effortlessly"
+            description="Track meals, workouts, and notes in your own words. No tedious forms or rigid categories, just describe what you did and move on."
             icon={BookHeart}
+            illustrationPlacement="left"
+          />
+
+          <HomePageUsp
+            titlePart1="See "
+            titlePart2="What Matters"
+            description="See more than just calories: track patterns, breakdowns, and how your nutrition and activity connect to your wellbeing."
+            icon={FileChartColumn}
             illustrationPlacement="right"
           />
 
           <HomePageUsp
-            titlePart1="Wellbeing, "
-            titlePart2="Adapted to You"
-            description="Anfold adapts to your goals, preferences, and health factors for insights and advice that actually fits you."
+            titlePart1="Fits "
+            titlePart2="Your Life"
+            description="Adapts to your goals, preferences, and health factors. Ask questions, get explanations, or receive advice that actually makes sense for you."
             icon={Target}
             illustrationPlacement="left"
           />
 
           <HomePageUsp
-            titlePart1="Detailed Tracking, "
-            titlePart2="In Your Own Words"
-            description="Just describe your meal or workout in your own words, Anfold handles the nutrition facts, calories, and data crunching."
-            icon={Feather}
-            illustrationPlacement="right"
-          />
-
-          <HomePageUsp
-            titlePart1="Full Context, "
-            titlePart2="Beyond Calories"
-            description="See full macro and micronutrient breakdowns, activity impact, and how everything ties into your bigger health picture."
-            icon={FileChartColumn}
-            illustrationPlacement="left"
-          />
-
-          <HomePageUsp
-            titlePart1="Chat with "
-            titlePart2="Your Data"
-            description="Ask questions, get explanations, or even vent, Anfold's contextual chat understands your entries and responds with useful advice."
-            icon={BotMessageSquare}
-            illustrationPlacement="right"
-          />
-
-          <HomePageUsp
-            titlePart1="Take Action with "
-            titlePart2="Practical Tools"
-            description="Need a meal plan? A workout outline? Or just a quick analysis of dinner? Anfold goes beyond logging to help you take action."
+            titlePart1="Go Beyond "
+            titlePart2="Tracking"
+            description="Need a meal plan? A workout outline? Or just a quick analysis? Anfold helps you plan and decide, not just record."
             icon={Lightbulb}
+            illustrationPlacement="right"
+          />
+
+          <HomePageUsp
+            titlePart1="Built for "
+            titlePart2="Real Life"
+            description="No rigid meal plans or calorie counting anxiety. Anfold works with your reality, messy or not, whether you're eating out, traveling, or just having an off week."
+            icon={Feather}
             illustrationPlacement="left"
           />
         </div>

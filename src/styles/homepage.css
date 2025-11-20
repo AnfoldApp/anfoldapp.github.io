@@ -85,6 +85,36 @@
   }
 }
 
+@keyframes floatIconMedium {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  43% {
+    transform: translateX(6px) translateY(9px);
+  }
+  57% {
+    transform: translateX(6px) translateY(9px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+@keyframes floatIconAltMedium {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  43% {
+    transform: translateX(3px) translateY(4.5px);
+  }
+  57% {
+    transform: translateX(3px) translateY(4.5px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
 .hero-section {
   background: var(--light-green-main);
   border-bottom: 1px solid var(--almond-lighter);
@@ -163,20 +193,34 @@
 }
 
 .usp-placeholder {
-  background: var(--hero-background);
   position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.usp-placeholder:hover {
+  transform: translateY(-2px);
 }
 
 .usp-placeholder::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('/assets/images/center-bg-blurred@2x.png') center/cover no-repeat;
-  opacity: 0.7;
-  pointer-events: none;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+    background: 
+    linear-gradient(var(--charcoal-darkest-40), var(--charcoal-darkest-90)),
+    /* linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), */
+    url('/assets/images/backdrop.png') no-repeat center center;
+  background-size: cover;
+  filter: blur(4px);
+  z-index: 0;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.usp-placeholder:hover::before {
+  transform: scale(1.03);
+  filter: blur(0px);
 }
 
 .usp-placeholder-icon {
@@ -189,16 +233,29 @@
   left: 0;
 }
 
-.usp-placeholder-icon-1 {
+.usp-placeholder-icon-shadow-1 {
   top: 0;
   left: 0;
   animation: floatIcon 9s ease-in-out infinite;
 }
 
-.usp-placeholder-icon-2 {
+.usp-placeholder-icon-shadow-2 {
   top: 0;
   left: 0;
   animation: floatIconAlt 9s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+
+.usp-placeholder-icon-shadow-1-medium {
+  top: 0;
+  left: 0;
+  animation: floatIconMedium 9s ease-in-out infinite;
+}
+
+.usp-placeholder-icon-shadow-2-medium {
+  top: 0;
+  left: 0;
+  animation: floatIconAltMedium 9s ease-in-out infinite;
   animation-delay: 0.2s;
 }
 

@@ -20,6 +20,9 @@ export default function Footer() {
             height={40}
           />
         </Link>
+        <Link href="/approach" className="with-underline">
+          Approach
+        </Link>
         <Link href="/terms-of-service" className="with-underline">
           Terms of Service
         </Link>

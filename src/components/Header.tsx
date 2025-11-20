@@ -1,18 +1,36 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Header() {
+interface HeaderProps {
+  className?: string;
+  theme?: "dark" | "light";
+}
+
+export default function Header({
+  className = "",
+  theme = "dark",
+}: HeaderProps) {
   return (
-    <header className="header">
+    <header className={`header ${className}`}>
       <Link href="/" className="logo-container">
         <Image
-          src="/assets/images/logo-dark.svg"
+          src={
+            theme === "dark"
+              ? "/assets/images/logo-dark.svg"
+              : "/assets/images/logo-light.svg"
+          }
           alt="Anfold"
           className="logo"
           width={40}
           height={40}
         />
-        <h3 className="font-medium mb-0 text-2xl">Anfold</h3>
+        <h3
+          className={`font-medium mb-0 text-2xl ${
+            theme === "light" ? "text-white" : "text-black"
+          }`}
+        >
+          Anfold
+        </h3>
       </Link>
 
       <a

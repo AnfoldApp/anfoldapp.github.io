@@ -17,6 +17,27 @@
   --mint-darker: #418649;
   --mint-darkest: #2c6332;
   
+  /* Mint Alpha Variations */
+  --mint-main-10: rgba(107, 203, 119, 0.10);
+  --mint-main-20: rgba(107, 203, 119, 0.20);
+  --mint-main-30: rgba(107, 203, 119, 0.30);
+  --mint-main-40: rgba(107, 203, 119, 0.40);
+  --mint-main-50: rgba(107, 203, 119, 0.50);
+  --mint-main-70: rgba(107, 203, 119, 0.70);
+  --mint-main-80: rgba(107, 203, 119, 0.80);
+  --mint-main-90: rgba(107, 203, 119, 0.90);
+  --mint-main-100: rgba(107, 203, 119, 1.00);
+  --mint-dark-10: rgba(86, 168, 96, 0.10);
+  --mint-dark-20: rgba(86, 168, 96, 0.20);
+  --mint-dark-30: rgba(86, 168, 96, 0.30);
+  --mint-dark-40: rgba(86, 168, 96, 0.40);
+  --mint-dark-50: rgba(86, 168, 96, 0.50);
+  --mint-dark-60: rgba(86, 168, 96, 0.60);
+  --mint-dark-70: rgba(86, 168, 96, 0.70);
+  --mint-dark-80: rgba(86, 168, 96, 0.80);
+  --mint-dark-90: rgba(86, 168, 96, 0.90);
+  --mint-dark-100: rgba(86, 168, 96, 1.00);
+  
   /* Crimson Color Palette */
   --crimson-lightest: #f5d8d7;
   --crimson-lighter: #e79d9a;
@@ -52,6 +73,17 @@
   --charcoal-dark: #444444;
   --charcoal-darker: #2D2D2D;
   --charcoal-darkest: #1a1a1a;
+
+  --charcoal-darkest-10: rgba(45, 45, 45, 0.10);
+  --charcoal-darkest-20: rgba(45, 45, 45, 0.20);
+  --charcoal-darkest-30: rgba(45, 45, 45, 0.30);
+  --charcoal-darkest-40: rgba(45, 45, 45, 0.40);
+  --charcoal-darkest-50: rgba(45, 45, 45, 0.50);
+  --charcoal-darkest-60: rgba(45, 45, 45, 0.60);
+  --charcoal-darkest-70: rgba(45, 45, 45, 0.70);
+  --charcoal-darkest-80: rgba(45, 45, 45, 0.80);
+  --charcoal-darkest-90: rgba(45, 45, 45, 0.90);
+  --charcoal-darkest-100: rgba(45, 45, 45, 1.00);
   
   /* Magenta Color Palette */
   --magenta-lightest: #ecd7ef;
