@@ -1,3 +1,4 @@
+import { appConfig } from "@/app.config";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -33,10 +34,7 @@ export default function Header({
         </h3>
       </Link>
 
-      <a
-        href="https://apps.apple.com/de/app/golem-app/id6476163056?itscg=30200&itsct=apps_box_badge&mttnsubad=6476163056"
-        className="ml-auto"
-      >
+      <a href={appConfig.appStoreUrl} className="ml-auto">
         <Image
           src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1721692800"
           alt="Download on the App Store"

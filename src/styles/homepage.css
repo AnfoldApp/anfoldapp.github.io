@@ -208,10 +208,9 @@
   left: -10px;
   right: -10px;
   bottom: -10px;
-    background: 
-    linear-gradient(var(--charcoal-darkest-40), var(--charcoal-darkest-90)),
-    /* linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), */
-    url('/assets/images/backdrop.png') no-repeat center center;
+  background: 
+  linear-gradient(var(--charcoal-darkest-40), var(--charcoal-darkest-90)),
+  var(--usp-bg-image, url('/assets/images/backdrop.png')) no-repeat center center;
   background-size: cover;
   filter: blur(4px);
   z-index: 0;

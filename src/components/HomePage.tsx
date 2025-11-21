@@ -8,13 +8,14 @@ import {
 } from "lucide-react";
 import HeroDoodles from "./HeroDoodles";
 import HomePageUsp from "./HomePageUsp";
+import { appConfig } from "@/app.config";
 
 export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
       <section className="hero-section">
-        <div className="hero-wrapper h-auto lg:h-full relative max-w-7xl mx-auto px-8 py-8">
+        <div className="hero-wrapper h-auto lg:h-full relative mx-auto max-w-7xl px-8 py-8">
           <div className="flex items-center gap-2 justify-center lg:justify-start mb-8 lg:mb-0">
             <Image
               src="/assets/images/logo-dark.svg"
@@ -44,10 +45,7 @@ export default function HomePage() {
               </p>
 
               <div className="flex justify-center lg:justify-start">
-                <a
-                  href="https://apps.apple.com/de/app/golem-app/id6476163056?itscg=30200&itsct=apps_box_badge&mttnsubad=6476163056"
-                  className="app-store-badge"
-                >
+                <a href={appConfig.appStoreUrl} className="app-store-badge">
                   <Image
                     src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1721692800"
                     alt="Download on the App Store"
@@ -85,6 +83,7 @@ export default function HomePage() {
             description="Track meals, workouts, and notes in your own words. No tedious forms or rigid categories, just describe what you did and move on."
             icon={BookHeart}
             illustrationPlacement="left"
+            backgroundImage="backdrop"
           />
 
           <HomePageUsp
@@ -93,6 +92,7 @@ export default function HomePage() {
             description="See more than just calories: track patterns, breakdowns, and how your nutrition and activity connect to your wellbeing."
             icon={FileChartColumn}
             illustrationPlacement="right"
+            backgroundImage="nutrition"
           />
 
           <HomePageUsp
@@ -101,6 +101,7 @@ export default function HomePage() {
             description="Adapts to your goals, preferences, and health factors. Ask questions, get explanations, or receive advice that actually makes sense for you."
             icon={Target}
             illustrationPlacement="left"
+            backgroundImage="exercise"
           />
 
           <HomePageUsp
@@ -109,6 +110,7 @@ export default function HomePage() {
             description="Need a meal plan? A workout outline? Or just a quick analysis? Anfold helps you plan and decide, not just record."
             icon={Lightbulb}
             illustrationPlacement="right"
+            backgroundImage="nutrition"
           />
 
           <HomePageUsp
@@ -117,6 +119,7 @@ export default function HomePage() {
             description="No rigid meal plans or calorie counting anxiety. Anfold works with your reality, messy or not, whether you're eating out, traveling, or just having an off week."
             icon={Feather}
             illustrationPlacement="left"
+            backgroundImage="backdrop"
           />
         </div>
       </section>
